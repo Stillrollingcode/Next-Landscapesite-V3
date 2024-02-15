@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply bg-neutral text-[#4C5249];
+    @apply bg-neutral;
     font-family: 'Radio Canada', sans-serif;
   }
   p,
