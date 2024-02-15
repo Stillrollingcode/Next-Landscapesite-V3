@@ -57,7 +57,7 @@ const Footer = () => {
                 </ul>
                 <div className=" flex flex-col gap-1 lg:items-end">
                     <div className="flex text-2xl gap-6 mx-4">
-                        <a href="https://www.facebook.com/NewRiverTurfPros" target="_blank">
+                        <a href="https://www.facebook.com/NewRiverTurfPros" target="_blank" rel="noreferrer">
                           <BsFacebook />
                         </a>
                     </div>

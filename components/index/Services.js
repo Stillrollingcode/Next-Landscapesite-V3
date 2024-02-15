@@ -42,8 +42,9 @@ const Services = () => {
       </h1>
       <div className="flex flex-col lg:flex-row gap:3 lg:gap-5 lg:mt-10 lg:mb-10">
        
-        {Cards.map((card) => (
+        {Cards.map((card, index) => (
            <motion.div
+           key={index}
            whileHover={{ scale: 1.1, rotate: 1 }}
            whileTap={{
              scale: 0.7,
