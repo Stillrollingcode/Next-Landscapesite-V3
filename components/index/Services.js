@@ -43,15 +43,13 @@ const Services = () => {
       <div className="flex flex-col lg:flex-row gap:3 lg:gap-5 lg:mt-10 lg:mb-10">
        
         {Cards.map((card, index) => (
-           <motion.div
-           key={index}
-           whileHover={{ scale: 1.1, rotate: 1 }}
-           whileTap={{
-             scale: 0.7,
-             rotate: -1,
-             className:'bg-white'
-           }}
-           >
+              <motion.div
+              variants={fadeInOut}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="min-h-[80vh] z-0"
+            >
               <Link href="/services" passHref className="cursor-pointer">
               <ServiceCard
                 key={card.title.replace(/\s+/g, "")}

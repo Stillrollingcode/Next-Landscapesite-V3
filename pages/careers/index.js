@@ -55,7 +55,7 @@ const careerQuery = `*[_type == "career"] | order(career, asc){
             </div>
           </h1>
         </div>
-        <p className="text-center text-sm w-full text-[#4C5249]">
+        <p className="text-center text-sm mx-24 lg:mx-44 text-[#4C5249]">
           Deserunt reprehenderit enim labore id et labore culpa excepteur
           occaecat aliqua. Est ea cupidatat minim proident commodo sint amet
           duis deserunt aliqua cillum.Consectetur ullamco laborum et ad
@@ -72,7 +72,7 @@ const careerQuery = `*[_type == "career"] | order(career, asc){
                       <Image
                           alt=""
                           src={urlFor(career.mainImg).url()}
-                          className="z-10 rounded-2xl self-start"
+                          className="z-10 rounded-2xl self-start shadow-lg"
                               placeholder="blur"
                           blurDataURL={urlFor(career.mainImg).url()}
                           layout="responsive"

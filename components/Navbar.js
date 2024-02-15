@@ -32,7 +32,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="relative lg:h-[50px] h-[80%] w-[100%] cursor-pointer">
+        <div className="relative lg:h-[50px] h-[80%] w-[50%] lg:ml-16 cursor-pointer">
           <Link href="/">
               <Image
                 src="/ag-logo.svg"
