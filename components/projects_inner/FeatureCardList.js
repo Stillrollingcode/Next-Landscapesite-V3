@@ -1,10 +1,10 @@
 import FeatureCard from "./FeatureCard";
 
-const FeatureCardList = ({ features }) => {
+const FeatureCardList = ({ services }) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center">
-      {features.map((feature, index) => (
-        <FeatureCard feature={feature} key={feature._key} />
+      {services.map((service, index) => (
+        <FeatureCard service={service} key={service._key} />
       ))}
     </div>
   );

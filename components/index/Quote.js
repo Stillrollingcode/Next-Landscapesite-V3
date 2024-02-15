@@ -1,14 +1,14 @@
 const Quote = () => {
   return (
-    <div className="py-20 bg-[url('/background.png')] bg-opacity-60 text-primary mb-[55px] lg:mb-[85px]">
+    <div className="py-20 bg-[url('/weed-eating.jpg')] bg-opacity-60 text-primary">
       <div className="ctn">
         <h2 className="font-bold text-4xl lg:text-4xl text-center lg:text-left mb-5 uppercase">
-          &quot;We believe the best is yet to come.&quot;
+          &quot;Helping shape our community, one yard at a time.&quot;
         </h2>
         <h3 className="text-center lg:text-right">
-          <span className="text-xl font-bold">- Alex Gibbs</span>
+          <span className="text-xl font-bold">- Aname Lowe</span>
           <br />
-          Founder & Managing Director
+          Founder & Owner
         </h3>
       </div>
     </div>

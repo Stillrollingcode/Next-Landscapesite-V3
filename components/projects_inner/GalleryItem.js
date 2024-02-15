@@ -9,29 +9,29 @@ const GalleryItem = ({ photo }) => {
   const isModal = useSelector((state) => state.innerPage.photoValue);
   const selectedPhoto = useSelector((state) => state.innerPage.photoKey);
 
-  return (
-    <>
-      {isModal && photo._key === selectedPhoto && (
-        <GalleryModal photo={photo} />
-      )}
-      <div
-        className="relative flex flex-col items-center gap-4 w-[95%] my-3 cursor-pointer"
-        onClick={() => dispatch(setPhotoOpen(photo._key))}
-      >
-        <div className="relative w-11/12 h-[300px] overflow-hidden rounded-xl">
-          <Image
-            src={urlFor(photo).url()}
-            layout="fill"
-            objectFit="cover"
-            placeholder="blur"
-            blurDataURL={urlFor(photo).url()}
-            className="hover:scale-105 ani"
-            alt=""
-          />
-        </div>
+  return <>
+    {isModal && photo._key === selectedPhoto && (
+      <GalleryModal photo={photo} />
+    )}
+    <div
+      className="relative flex flex-col items-center gap-4 w-[95%] my-3 cursor-pointer"
+      onClick={() => dispatch(setPhotoOpen(photo._key))}
+    >
+      <div className="relative w-11/12 h-[300px] overflow-hidden rounded-xl">
+        <Image
+          src={urlFor(photo).url()}
+          placeholder="blur"
+          blurDataURL={urlFor(photo).url()}
+          className="hover:scale-105 ani"
+          alt=""
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover"
+          }} />
       </div>
-    </>
-  );
+    </div>
+  </>;
 };
 
 export default GalleryItem;

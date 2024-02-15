@@ -1,4 +1,4 @@
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { GoogleMap, LoadScript, CircleF } from "@react-google-maps/api";
 import MapStyle from "./MapStyle";
 
 const key = process.env.NEXT_PUBLIC_GOOGLE_MAP_KEY;
@@ -8,9 +8,13 @@ const containerStyle = {
   height: "400px",
 };
 
-const center = {
-  lat: 22.282019177672204,
-  lng: 114.15445384867213,
+// const center = {
+//   lat: 37.06669,
+//   lng: -80.44114,
+// };
+const citymap = {
+    center: { lat: 37.132142860702864, lng: -80.39228332643232 },
+    population: 30000,
 };
 
 const Map = () => {
@@ -19,17 +23,27 @@ const Map = () => {
       <LoadScript googleMapsApiKey={key}>
         <GoogleMap
           mapContainerStyle={containerStyle}
-          center={center}
-          zoom={19}
+          center={citymap.center}
+          zoom={10.25}
           options={{
             styles: MapStyle,
             disableDefaultUI: true,
             zoomControl: true,
+            mapTypeId: 'hybrid',
           }}
         >
           {/* Child components, such as markers, info windows, etc. */}
-          <Marker position={center} title="Agenda Consulting Asia" />
-          <></>
+          <CircleF
+            center={citymap.center}
+            radius={Math.sqrt(citymap.population) * 100}
+            options={{
+              strokeColor: "#37614A",
+              strokeOpacity: 0.8,
+              strokeWeight: 2,
+              fillColor: "lightGreen",
+              fillOpacity: 0.45,
+            }}
+          />
         </GoogleMap>
       </LoadScript>
     </div>

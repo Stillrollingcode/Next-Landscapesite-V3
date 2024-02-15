@@ -1,6 +1,6 @@
 import { BiPen } from "react-icons/bi";
 
-const InnerServices = ({ project }) => {
+const InnerServices = ({ service }) => {
   return (
     <div className="py-16 bg-[url('/background.png')] bg-cover bg-opacity-60 text-primary mb-[105px]">
       <div className="ctn">
@@ -12,7 +12,7 @@ const InnerServices = ({ project }) => {
             </h2>
           </div>
           <div className="col-span-2 md:columns-2 columns-1 md:text-lg text-base md:leading-loose leading-7 capitalize font-medium">
-            {project?.services.map((service) => (
+            {service?.service.map((service) => (
               <li className="text-center md:text-left" key={service}>
                 {service}
               </li>

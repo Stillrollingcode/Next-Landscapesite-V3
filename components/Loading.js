@@ -4,11 +4,11 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLoadingState } from "../lib/reducers/footerSlice";
-import { setFilter } from "../lib/reducers/projectSlice";
+import { setFilter } from "../lib/reducers/serviceSlice";
 
 function Loading() {
   const router = useRouter();
-  const filterValue = useSelector((state) => state.project.filterValue);
+  const filterValue = useSelector((state) => state.service.filterValue);
   const dispatch = useDispatch();
 
   const [loading, setLoading] = useState(false);
@@ -28,23 +28,23 @@ function Loading() {
     };
   });
 
-  return (
-    loading && (
-      <motion.div className="flex flex-col justify-center items-center fixed top-0 left-0 w-full h-screen bg-neutral bg-opacity-90 z-20 ani">
-        <div className="relative h-[100px] w-[100px] animate-pulse">
-          <Image
-            src="/ag-logo.svg"
-            alt="Agenda Logo"
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
-        <h2 className="text-center text-xl tracking-wider text-secondary opacity-50">
-          Loading
-          {filterValue !== "" ? dispatch(setFilter("")) : ""}
-        </h2>
-      </motion.div>
-    )
+  return loading && (
+    <motion.div className="flex flex-col justify-center items-center fixed top-0 left-0 w-full h-screen bg-neutral bg-opacity-90 z-20 ani">
+      <div className="relative h-[100px] w-[100px] animate-pulse">
+        <Image
+          src="/ag-logo.svg"
+          alt="Agenda Logo"
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "contain"
+          }} />
+      </div>
+      <h2 className="text-center text-xl tracking-wider text-secondary opacity-50">
+        Loading
+        {filterValue !== "" ? dispatch(setFilter("")) : ""}
+      </h2>
+    </motion.div>
   );
 }
 

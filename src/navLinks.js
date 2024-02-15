@@ -4,16 +4,17 @@ const links = [
     link: "/",
   },
   {
-    title: "Team",
-    link: "/team",
+    title: "Services",
+    link: "/services",
   },
   {
-    title: "Projects",
-    link: "/projects",
+    title: "About",
+    link: "/about",
   },
+
   {
-    title: "News",
-    link: "/news",
+    title: "Careers",
+    link: "/careers",
   },
   {
     title: "Contact",

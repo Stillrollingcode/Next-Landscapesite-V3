@@ -10,46 +10,47 @@ const Navbar = () => {
   const menuState = useSelector((state) => state.mobileMenu.value);
   const dispatch = useDispatch();
 
-  return (
-    <>
-      <nav className="flex justify-center items-center fixed w-full top-0 z-30 bg-neutral bg-opacity-90 border-b-2 lg:px-10 px-4 max-h-[8%]">
-        <div className="container mx-auto grid grid-cols-3 justify-between items-center py-4 px-2">
-          <div>
-            {/* {isMenuOpen && <MobileMenu setIsMenuOpen={setIsMenuOpen} />} */}
-            {menuState && <MobileMenu />}
-            <HiMenuAlt2
-              className="xl:hidden text-5xl  p-[8px] rounded-full ani cursor-pointer"
-              onClick={() => {
-                dispatch(setMenuOpen());
-              }}
-            />
-            <ul className="hidden xl:flex space-x-10 text-primary font-bold">
-              {links.map((link) => (
-                <li className="hover:text-secondary ani" key={link.title}>
-                  <Link href={link.link} scroll={false}>
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="relative lg:h-[50px] h-[80%] w-[100%]">
-            <Image
-              src="/ag-logo.svg"
-              alt="Agenda Logo"
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
-          <Link scroll={false} href="/contact">
-            <a className="btn text-xs lg:text-base md:w-3/4 lg:w-1/2 text-center cursor-pointer">
-              Contact
-            </a>
+  return <>
+    <nav className="flex justify-center items-center fixed w-full top-0 z-30 bg-neutral bg-opacity-90 border-b-2 lg:px-10 px-4 max-h-[8%]">
+      <div className="container mx-auto grid grid-cols-3 justify-between items-center py-4 px-2">
+        <div>
+          {/* {isMenuOpen && <MobileMenu setIsMenuOpen={setIsMenuOpen} />} */}
+          {menuState && <MobileMenu />}
+          <HiMenuAlt2
+            className="xl:hidden text-5xl  p-[8px] rounded-full ani cursor-pointer"
+            onClick={() => {
+              dispatch(setMenuOpen());
+            }}
+          />
+          <ul className="hidden xl:flex space-x-10 text-primary font-bold">
+            {links.map((link) => (
+              <li className="hover:text-secondary ani" key={link.title}>
+                <Link href={link.link} scroll={false}>
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="relative lg:h-[50px] h-[80%] w-[100%] cursor-pointer">
+          <Link href="/">
+              <Image
+                src="/ag-logo.svg"
+                alt="Agenda Logo"
+                layout="fill"
+                sizes="100vw"
+                style={{
+                  objectFit: "contain"
+                }}
+              />
           </Link>
         </div>
-      </nav>
-    </>
-  );
+        <Link scroll={false} href="/contact" className="btn text-xs lg:text-base md:w-3/4 lg:w-1/2 text-center cursor-pointer">
+          Contact
+        </Link>
+      </div>
+    </nav>
+  </>;
 };
 
 export default Navbar;

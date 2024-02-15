@@ -1,5 +1,5 @@
 import Testimonial from "./Testimonial";
-import { GoPrimitiveDot } from "react-icons/go";
+import { GoDot } from "react-icons/go";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import DaisyTest from "./DaisyTest";
 
@@ -15,9 +15,9 @@ const Testimonials = () => {
           <BsArrowLeftCircle className="text-4xl text-primary" />
         </button>
         <div className="flex text-md gap-2">
-          <GoPrimitiveDot className="text-primary" />
-          <GoPrimitiveDot className="text-secondary text-opacity-20" />
-          <GoPrimitiveDot className="text-secondary text-opacity-20" />
+          <GoDot className="text-primary" />
+          <GoDot className="text-secondary text-opacity-20" />
+          <GoDot className="text-secondary text-opacity-20" />
         </div>
         <button>
           <BsArrowRightCircle className="text-4xl text-primary" />

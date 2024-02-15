@@ -17,12 +17,14 @@ const GalleryModal = ({ photo }) => {
         <div className="relative max-w-[800px] w-[1000px] max-h-[500px] h-[1000px]">
           <Image
             src={urlFor(photo).url()}
-            layout="fill"
-            objectFit="contain"
             placeholder="blur"
             blurDataURL={urlFor(photo).url()}
             alt=""
-          />
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "contain"
+            }} />
         </div>
       </div>
     </div>

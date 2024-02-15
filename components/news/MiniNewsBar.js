@@ -8,8 +8,8 @@ const MiniNewsBar = ({ miniNews }) => {
       <div className="ml-[10%]">
         <div className="flex justify-between items-center mb-6">
           <h3 className="font-bold text-primary text-3xl">Other News</h3>
-          <Link href="/news" scroll={false}>
-            <a className="btn">see all</a>
+          <Link href="/news" scroll={false} className="btn">
+            see all
           </Link>
         </div>
         <hr className="border-t-2 my-4" />
@@ -27,13 +27,15 @@ const MiniNewsBar = ({ miniNews }) => {
                       <div className="relative w-full h-[130px] overflow-hidden rounded-lg">
                         <Image
                           src={urlFor(news.featureImg).url()}
-                          layout="fill"
-                          objectFit="cover"
                           className="group-hover:scale-110 ani"
                           placeholder="blur"
                           blurDataURL={urlFor(news.featureImg).url()}
                           alt=""
-                        />
+                          fill
+                          sizes="100vw"
+                          style={{
+                            objectFit: "cover"
+                          }} />
                       </div>
                       <div className="flex flex-col justify-between">
                         <h4 className="font-bold text-md leading-tight group-hover:text-primary ani">

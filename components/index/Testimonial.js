@@ -6,12 +6,14 @@ const Testimonial = () => {
       <div className="absolute top-[-60px] h-[120px] w-[120px] mb-5 rounded-full overflow-hidden shadow-md">
         <Image
           src="/avatar/zvY94dFUiqKwu1PMVsw5_thatnordicguyredo.jpg"
-          layout="fill"
-          objectFit="cover"
           placeholder="blur"
           blurDataURL="/avatar/zvY94dFUiqKwu1PMVsw5_thatnordicguyredo.jpg"
           alt=""
-        />
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover"
+          }} />
       </div>
       <p className="mt-8 text-sm">
         “I just wanted to personally thank you for being instrumental in

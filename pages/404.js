@@ -18,9 +18,11 @@ const ErrorPage = ({ content }) => {
             <Image
               src="/ag-logo.svg"
               alt="Agenda Logo"
-              layout="fill"
-              objectFit="contain"
-            />
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "contain"
+              }} />
           </div>
           <h2 className="font-bold text-2xl mb-8">This is an invalid link.</h2>
           <Link scroll={false} href="/" passHref>
