@@ -14,7 +14,6 @@ const staffQuery = `*[_type == "staff"]{
   order,
   profilePic,
   introduction,
-  socialMedia
 }`;
 
 const Team = ({ staff }) => {
