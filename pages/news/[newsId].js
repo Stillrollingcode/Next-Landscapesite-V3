@@ -1,3 +1,12 @@
+import React from 'react'
+
+const news = () => {
+  return (
+    <div></div>
+  )
+}
+
+export default news
 // import Link from "next/link";
 // import Image from "next/image";
 // import MiniNewsBar from "../../components/news/MiniNewsBar";
