@@ -67,8 +67,8 @@ const careerQuery = `*[_type == "career"] | order(career, asc){
         <br/>
       <div className='ctn flex flex-wrap mb-12 items-start text-primary'>
           {careers.map((career) => (
-              <div key={career._id} className="flex flex-col items-start w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
-                <div className="flex flex-col justify-start min-[200px]:max-[780px]:w-[500px]"> 
+              <div key={career._id} className="flex flex-col items-start w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 sm:p-2">
+               <div className="flex flex-col justify-start min-w-[200px] max-w-[780px] w-full"> 
                       <Image
                           alt=""
                           src={urlFor(career.mainImg).url()}
@@ -87,7 +87,7 @@ const careerQuery = `*[_type == "career"] | order(career, asc){
                           <h1 className='text-2xl mt-4'>{career.position}</h1>
                           <p className='text-lg text-[#4C5249]'>
                             {expandedCareers.includes(career._id) ? career.description : `${career.description.substring(0, 100)}...`}
-                            <button onClick={() => handleReadMore(career._id)} className='text-primary'>
+                            <button onClick={() => handleReadMore(career._id)} className='text-primary_light'>
                               {expandedCareers.includes(career._id) ? 'Read Less' : 'Read More'}
                             </button>
                           </p>
