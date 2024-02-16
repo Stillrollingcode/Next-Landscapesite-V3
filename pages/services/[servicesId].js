@@ -32,7 +32,7 @@ const Services = ({ singleService }) => {
               <InnerHero services={singleService} />
               <Link scroll={false} href="/contact" passHref>
                 <p className="btn2 text-md lg:text-base min-[200px]:w-[100%] p-8 mb-16 -mt-16 cursor-pointer text-center content-center">
-                  Click for a free quote
+                  CLICK FOR A FREE ESTIMATE!
                 </p>
               </Link>
             </div>          

@@ -20,16 +20,16 @@ const TeamHero = () => {
             </div>
           </h1>
         </div>
-        <p className="text-center lg:text-left text-sm text-[#4C5249]">{`'
+        <p className="text-center lg:text-left text-sm text-[#4C5249]">{`
           serving the community we call home drives everything we do.
           Nestled in the heart of this picturesque region, we take immense pride in contributing to the beauty and charm of our neighborhoods.
           From rolling hills to quaint townships, we understand the unique character of Southwest Virginia, and it inspires us to create landscapes that seamlessly blend with the local environment.
           Our commitment goes beyond just business - it's a reflection of our love for this community and our desire to enhance the quality of life for our neighbors.
-          <br />
-          <br /> At New River Landscaping, we find joy in transforming residential and commercial properties into stunning outdoor spaces that leave a lasting impression.
+
+          At New River Landscaping, we find joy in transforming residential and commercial properties into stunning outdoor spaces that leave a lasting impression.
           We believe that a well-designed landscape not only enhances the aesthetic appeal but also adds value to your investment.
           Whether it's a cozy backyard retreat or a welcoming entrance for your business, we are dedicated to bringing your vision to life.
-        '`}</p>
+        `}</p>
       </div>
       <div className="relative h-[35vh] lg:h-[45vh] col-span-2 lg:col-span-1">
         <div className="relative h-full w-full overflow-hidden rounded-2xl">
